@@ -1,0 +1,28 @@
+In C#, creating a simple "Hello, World!" console application could be done as follows:
+
+1. First, you would need to open your development environment (such as Visual Studio).
+ 
+2. Create a new project and select "Console App (.NET Core)" or "Console App (.NET Framework)" depending on your installed development SDKs.
+
+3. After creating the new project, Visual Studio will generate a Program.cs file for you, which will contain some default code,you can replace with this:
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+        }
+    }
+}
+```
+ 
+4. After pasting this into your Program.cs file, you can press `Ctrl+F5` (Start Without Debugging) in Visual Studio to run your program. 
+
+5. A console window will open briefly and display the text "Hello, World!". 
+
+This C# program essentially writes the string "Hello, World!" to the console output. It is a typical first program for many new programmers. The `Console.WriteLine` function is a built-in function in the C# programming language that outputs its argument as text to the console. In our case, it's outputting the literal string "Hello, World!". This principle of outputting to the console can be used for valuable feedback while developing software in pretty much any language.
