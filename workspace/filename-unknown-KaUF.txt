@@ -1,0 +1,30 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using HelloWorld;
+using System.IO;
+
+namespace HelloWorldTests
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        private string _consoleOutput;
+        
+        [TestInitialize]
+        public void Setup()
+        {
+            var output = new StringWriter();
+            Console.SetOut(output);
+        
+            Program.Main(new string[0]);
+        
+            _consoleOutput = output.ToString();
+        }
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+            Assert.IsTrue(_consoleOutput.Contains("Hello, World!"));
+        }
+    }
+}
